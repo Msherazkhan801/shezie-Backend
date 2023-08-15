@@ -14,7 +14,7 @@ const Stripe = require('stripe');
 const getOrder=async(req,res)=>{
     try{
       const data = await orderdProductModel.find({})
-    res.send(JSON.stringify(data))
+       res.send(JSON.stringify(data))
   }
     catch (err){
         res.status(err.statusCode || 500).json(err.message)
@@ -36,7 +36,7 @@ const getOrder=async(req,res)=>{
     try {
       const approveData = await orderdProductModel.findByIdAndUpdate(
         id,
-        { approved: true }, 
+        { approved: true , status:'your order is accepted will soon collect  or contact us'}, 
         { new: true } 
       );
     console.log(approveData);

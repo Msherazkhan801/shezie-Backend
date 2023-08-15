@@ -19,7 +19,9 @@ const schemaOrder = mongoose.Schema({
     approved:{
         type:Boolean,
         default:false
-    }
+    },
+    status:String
+
     // product:{
     //     type: mongoose.Schema.Types.ObjectId,
     //     ref: productModel
